@@ -23,5 +23,8 @@ jobs:
         distribution: 'adopt'
     - uses: browser-actions/setup-firefox@latest
     - run: firefox --version
+    - run: sudo apt-get install xvfb
+    - run: export DISPLAY=':99.0'
+    - run: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
     - name: execute e2e test on firefox
       run: mvn test -Dbrowser=firefox --file pom.xml
