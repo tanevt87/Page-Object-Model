@@ -23,6 +23,8 @@ jobs:
         distribution: 'adopt'
     - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
+      with:
+      chrome-version: beta
     - run: sudo apt-get install xvfb
     - run: export DISPLAY=':99.0'
     - run: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
