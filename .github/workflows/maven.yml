@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-    - uses: browser-actions/setup-chrome@92
+    - uses: browser-actions/setup-chrome@latest
     - run: chrome --version
     - run: sudo apt-get install xvfb
     - run: export DISPLAY=':99.0'
